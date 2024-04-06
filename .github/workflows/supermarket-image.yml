@@ -17,12 +17,12 @@ jobs:
       run:
         working-directory: supermarket
     steps:
+    - uses: actions/checkout@v3
     - name: Get current datetime
       id: datetime
       run: |
         # Store current date and time in a variable
         echo "timestamp=$(date +'%y%m%d')" >> $GITHUB_OUTPUT
-    - uses: actions/checkout@v3
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
