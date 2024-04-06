@@ -51,5 +51,5 @@ jobs:
         push: true
         platforms: linux/amd64,linux/arm64
         tags: |
-         ${{ github.actor }}/${{ env.IMAGE_NAME }}:latest
-         ${{ github.actor }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+         ghcr.io/${{ github.actor }}/${{ env.IMAGE_NAME }}:latest
+         ghcr.io/${{ github.actor }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
