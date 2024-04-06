@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Supermarket
+
+logging:
+  level:
+    "com.github.zhoukq": DEBUG
+
+remote:
+  digitalUrl: http://localhost:8081
+  foodUrl: http://localhost:8082
