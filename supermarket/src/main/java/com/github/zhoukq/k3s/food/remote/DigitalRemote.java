@@ -4,8 +4,10 @@ import com.github.zhoukq.k3s.food.entiy.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
@@ -15,6 +17,8 @@ import java.util.List;
 public class DigitalRemote implements InitializingBean {
 
     private RestClient restClient;
+    @Autowired
+    private ClientHttpRequestFactory clientHttpRequestFactory;
 
     @Value("${remote.digitalUrl}")
     private String digitalUrl;
@@ -35,6 +39,6 @@ public class DigitalRemote implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        this.restClient = RestClient.builder().baseUrl(digitalUrl).build();
+        this.restClient = RestClient.builder().requestFactory(clientHttpRequestFactory).baseUrl(digitalUrl).build();
     }
 }

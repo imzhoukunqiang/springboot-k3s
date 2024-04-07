@@ -7,5 +7,6 @@ logging:
     "com.github.zhoukq": DEBUG
 
 remote:
+  timeout: 1200
   digitalUrl: http://localhost:8081
   foodUrl: http://localhost:8082
