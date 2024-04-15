@@ -42,7 +42,7 @@ public class HomeController {
     private Map<String, List<Product>> loadProductMap() {
         LinkedHashMap<String, List<Product>> map = new LinkedHashMap<>();
         map.put("手机数码", digitalRemote.getProductList());
-//        map.put("零食饮料", foodRemote.getProductList());
+        map.put("零食饮料", foodRemote.getProductList());
         return map;
     }
 
