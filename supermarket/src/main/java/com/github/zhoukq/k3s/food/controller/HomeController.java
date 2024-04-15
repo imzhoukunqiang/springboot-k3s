@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,9 +40,9 @@ public class HomeController {
     }
 
     private Map<String, List<Product>> loadProductMap() {
-        HashMap<String, List<Product>> map = new HashMap<>();
+        LinkedHashMap<String, List<Product>> map = new LinkedHashMap<>();
         map.put("手机数码", digitalRemote.getProductList());
-        map.put("零食饮料", foodRemote.getProductList());
+//        map.put("零食饮料", foodRemote.getProductList());
         return map;
     }
 
