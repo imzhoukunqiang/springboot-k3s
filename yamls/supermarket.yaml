@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: supermarket  # 容器名称
-          image: ghcr.io/imzhoukunqiang/springboot-k3s-supermarket:1.1.0  # 镜像
+          image: ghcr.io/imzhoukunqiang/springboot-k3s-supermarket:1.2.0  # 镜像
           imagePullPolicy: Always  # 镜像拉取策略
           ports:
             - name: tcp-8080  # 端口名称
