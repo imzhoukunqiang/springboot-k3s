@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: digital
-          image: ghcr.io/imzhoukunqiang/springboot-k3s-digital:1.0.0
+          image: ghcr.io/imzhoukunqiang/springboot-k3s-digital:1.2.0
           imagePullPolicy: Always
           ports:
             - name: tcp-8080
